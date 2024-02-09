@@ -4,32 +4,45 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+
+<h1 class="display-5 text-light my-5">Categoria do Produto <svg class="me-3" bootstrap-icon="BagCheckFill" width="30" height="30" aria-label="Alarms"></svg></h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-outline-success" asp-action="Create">
+        Adicionar
+    </a>
 </p>
-<table class="table">
+<table class="table table-striped table-hover" style="background-color:#6C22A6; color:#B4B4B8">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CategoriaNome)
+                Nome da Categoria
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoriaNome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoriaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoriaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoriaId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoriaName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoriaId">
+                        <svg class="mx-3" bootstrap-icon="PencilFill" width="24" height="24" aria-label="PencilFill"></svg>
+                        Editar
+                    </a> |
+                    <a asp-action="Details" asp-route-id="@item.CategoriaId">
+                        <svg class="mx-3" bootstrap-icon="CardText" width="24" height="24" aria-label="CardText"></svg>
+                        Detalhes
+                    </a> |
+                    <a asp-action="Delete" asp-route-id="@item.CategoriaId">
+                        <svg class="mx-3" bootstrap-icon="Trash" width="24" height="24" aria-label="Trash2Fill"></svg>
+                        Deletar
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

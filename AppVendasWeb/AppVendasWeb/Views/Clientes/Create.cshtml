@@ -1,12 +1,13 @@
 ﻿@model AppVendasWeb.Models.Cliente
 
 @{
-    ViewData["Title"] = "Cadastrar Novo Cliente";
+    ViewData["Title"] = "Create";
 }
 
-<h1 class="display-5 text-light my-5">Cadastrar Novo Cliente</h1>
+<h1>Create</h1>
 
-
+<h4>Cliente</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -38,21 +39,24 @@
             </div>
             <div class="form-group">
                 <label asp-for="DataCadastro" class="control-label"></label>
-                <input asp-for="DataCadastro" class="form-control"
-                       value=@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") readonly />
+                <input asp-for="DataCadastro" class="form-control" value=@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") readonly />
                 <span asp-validation-for="DataCadastro" class="text-danger"></span>
             </div>
-            <div class="form-group form-check form-switch my-3">
+            <div class="form-group form-check form-switch">
                 <label class="form-check-label">
                     <input class="form-check-input" role="switch" asp-for="CadastroAtivo" /> @Html.DisplayNameFor(model => model.CadastroAtivo)
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-outline-light">Voltar</a>
+                <input type="submit" value="Adicionar" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-outline-danger">Voltar</a>
             </div>
         </form>
     </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

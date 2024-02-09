@@ -6,12 +6,12 @@ namespace AppVendasWeb.Models
     {
         public Guid ProdutoId { get; set; }
 
-        [Required(ErrorMessage = "O campo Descrição é Obrigatório!")]
+        [Required(ErrorMessage = "O campo Descrição é obrigatório!")]
         [Display(Name = "Nome do Produto")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "O campo Descrição deve ter entre 3 e 100 caracteres")]
         public string Descricao { get; set; }
 
-        [Required(ErrorMessage = "O campo Preço é Obrigatório!")]
+        [Required(ErrorMessage = "O campo Preço é obrigatório!")]
         [Display(Name = "Preço")]
         public decimal Preco { get; set; }
 

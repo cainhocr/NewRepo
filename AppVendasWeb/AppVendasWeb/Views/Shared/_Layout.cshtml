@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AppVendasWeb.styles.css" asp-append-version="true" />
 </head>
-<body class="bg-dark bg-gradient text-light">
+<body style="background-color:#BEADFA; ">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark text-light border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark text-light border-bottom box-shadow mb-3" style="background-color:#756AB6">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppVendasWeb</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <svg class="me-3" bootstrap-icon="Boxes" width="50" height="50" aria-label="Alarms"></svg>
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,6 +26,9 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
                         </li>
                         <li class="nav-item">
@@ -30,6 +36,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Vendas" asp-action="Index">Vendas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="ItemDaVendas" asp-action="Index">Itens da Venda</a>
                         </li>
                     </ul>
                 </div>
@@ -42,10 +54,10 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-light bg-dark text-center">
+    <footer class="border-top footer text-light text-center">
         <div class="container">
-            &copy; 2024 - AppVendasWeb -
-            <a class="text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
+            &copy; 2024 - AppVendasWeb - <a class="text-light" style="text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
